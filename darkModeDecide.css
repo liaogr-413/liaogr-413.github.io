@@ -1,0 +1,17 @@
+body {
+    background-color: #0c0c0d; 
+    color: #f5f7fa;          
+}
+
+h1 {
+    color: #0077ff; 
+}
+
+p {
+    color: #f5f7fa; 
+}
+
+/* 其他元素的顏色也可以在這裡設定 */
+a {
+    color: #bb86fc; /* 連結顏色 */
+}
