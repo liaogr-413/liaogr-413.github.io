@@ -1,11 +1,11 @@
 body {
-    font-family: "Microsoft JhengHei", Noto Sans TC, sans-serif; /* 優先使用 Arial，如果沒有則用 Helvetica，再沒有則用任何無襯線字體 */
+    font-family: "Microsoft JhengHei", "Noto Sans TC", sans-serif; /* 優先使用微軟正黑體，如果沒有則用Noto Sans TC，再沒有則用任何無襯線字體 */
 }
 
 h1 {
-    font-family: "Microsoft JhengHei", Noto Sans TC, sans-serif;
+    font-family: "Microsoft JhengHei", "Noto Sans TC", sans-serif;
 }
 
 p {
-    font-family: "Microsoft JhengHei", Noto Sans TC, sans-serif;
+    font-family: "Microsoft JhengHei", "Noto Sans TC", sans-serif;
 }
