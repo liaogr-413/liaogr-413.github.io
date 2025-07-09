@@ -1,17 +1,17 @@
 body {
-    background-color: #0c0c0d; 
+    background-color: #0c0c0d; /* 深色背景 */
     color: #f5f7fa;          
 }
 
 h1 {
-    color: #0077ff; 
+    color: #0077ff; /* 亮藍色 */ 
 }
 
 p {
-    color: #f5f7fa; 
+    color: #f5f7fa; /* 文字 */
 }
 
 /* 其他元素的顏色也可以在這裡設定 */
 a {
-    color: #bb86fc; /* 連結顏色 */
+    color: null;
 }
