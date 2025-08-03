@@ -1,11 +1,18 @@
+@font-face {
+  font-family: 'LineSeedTW'; /* 給你的字型一個自訂名稱 */
+  src: url('https://github.com/liaogr-413/liaogr-413.github.io/raw/refs/heads/main/fonts/LINESeedTW_TTF_Bd.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
-    font-family: "Microsoft JhengHei", "Noto Sans TC", sans-serif; /* 優先使用微軟正黑體，如果沒有則用Noto Sans TC，再沒有則用任何無襯線字體 */
+    font-family: "LineSeedTW","Microsoft JhengHei", "Noto Sans TC", sans-serif; /* 優先使用LineSeedTW，如果沒有則用微軟正黑體，若沒有則用Noto Sans TC，再沒有則用任何無襯線字體 */
 }
 
 h1 {
-    font-family: "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+    font-family: "LineSeedTW","Microsoft JhengHei", "Noto Sans TC", sans-serif;
 }
 
 p {
-    font-family: "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+    font-family: "LineSeedTW","Microsoft JhengHei", "Noto Sans TC", sans-serif;
 }
