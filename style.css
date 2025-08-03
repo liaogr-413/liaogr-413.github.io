@@ -6,13 +6,13 @@
 }
 
 body {
-    font-family: "LineSeedTW","Microsoft JhengHei", "Noto Sans TC", sans-serif; /* 優先使用LineSeedTW，如果沒有則用微軟正黑體，若沒有則用Noto Sans TC，再沒有則用任何無襯線字體 */
+    font-family: "LineSeedTW", "Microsoft JhengHei", "Noto Sans TC", sans-serif; /* 優先使用LineSeedTW，如果沒有則用微軟正黑體，若沒有則用Noto Sans TC，再沒有則用任何無襯線字體 */
 }
 
 h1 {
-    font-family: "LineSeedTW","Microsoft JhengHei", "Noto Sans TC", sans-serif;
+    font-family: "LineSeedTW", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
 }
 
 p {
-    font-family: "LineSeedTW","Microsoft JhengHei", "Noto Sans TC", sans-serif;
+    font-family: "LineSeedTW", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
 }
