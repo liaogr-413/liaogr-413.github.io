@@ -7,30 +7,31 @@
     <link rel="stylesheet" href="style.css"></head>
     <style> 
       body {
-      background-image: url('pageBackground.png');
-      background-size: cover; /* 圖片會縮放以覆蓋整個背景區域，可能會裁剪 */
-      background-repeat: no-repeat; 
-      background-position: center center;
-      background-attachment: fixed; /* (可選) 圖片固定，不隨捲動軸捲動 */
-      color: white;
-    }
-      .marquee-text {                        /* 跑馬燈格式定義 */
-      font-family: "LineSeedTW", sans-serif;
-      color: #62bafc;
-      font-size: 20px;
-    }
-    position: relative;  /* 網頁版本顯示定義 */
-    height: 100vh; /* 讓頁面高度佔滿視窗 */
-    margin: 0;
-    }
+    background-image: url('pageBackground.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    color: white;
 
-    .RightTextVer {
-      position: absolute; /* 使用絕對定位 */
-      bottom: 10px;      /* 距離底部 10 像素 */
-      right: 10px;     /* 距離右邊 10 像素 */
-      color: gray    /* 灰色 */
-    }
-    
+    /* 將這三個關鍵屬性加到 body 裡 */
+    position: relative;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .marquee-text {
+    font-family: "LineSeedTW", sans-serif;
+    color: #62bafc;
+    font-size: 20px;
+  }
+  
+  .RightTextVer {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: gray;
+  }
 </style>
 </head>
    
