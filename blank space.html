@@ -26,6 +26,9 @@
     transform: translateX(-50%); /* 關鍵！將元素本身向左移動它寬度的一半 */
     color: #0077ff;
     font-size: 24px;
+    max-width: 90%; /* 確保最大寬度不超過視窗的 90% */
+    box-sizing: border-box; /* 確保 padding 和 border 不會增加總寬度 */
+    text-align: center; /* 讓文字在元素內置中 */
   }
 </style>
 </head>
