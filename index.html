@@ -19,12 +19,24 @@
       color: #62bafc;
       font-size: 20px;
     }
+
+    position: relative;  /* 網頁版本顯示定義 */
+    height: 100vh; /* 讓頁面高度佔滿視窗 */
+    margin: 0;
+  }
+
+  .RightTextVer {
+    position: absolute; /* 使用絕對定位 */
+    bottom: 10px;      /* 距離底部 10 像素 */
+    right: 10px;     /* 距離右邊 10 像素 */
+    color: gray    /* 灰色 */
+  }
 </style>
 </head>
    
 <body>
     <marquee><span class="marquee-text">
-        (ver20250803)跑馬燈程式測試中，必須非常優質
+        不知道放甚麼，也沒東西好放，就打一些字吧...
     </span></marquee>
     <img src="grAvaterRemoveBackground.png" alt="我的頭像" width="140" height="252"> <h1 style="font-size: 40px;">這裡是gr的網頁</h1>
     <p style="font-size: 25px;">不知道放甚麼，也沒東西好放，就打一些字吧...</p> 
@@ -38,5 +50,6 @@
     <a href="ScratchEmbed.html" style="font-size: 20px;">前往scratch自製木魚內嵌頁面\</a>
     <a href="https://github.com/liaogr-413/liaogr-413.github.io/tree/main" style="font-size: 20px">前往github總庫\</a>
     <a href="README.md" style="font-size: 20px;">前往自述文件頁</a>
+    <div class="bottom-right-text">ver20250808.01。</div>
 </body>
 </html>
