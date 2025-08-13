@@ -13,5 +13,5 @@ p {
 
 /* 其他元素的顏色也可以在這裡設定 */
 a {
-    color: #0077ff;/*link顏色*/
+    color: gray;/*link顏色*/
 }
