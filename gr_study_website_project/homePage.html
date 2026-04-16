@@ -12,10 +12,13 @@
         .textbox_emu500{
             width: 250px;
             height: 250px;
-            background-size: cover;
-            background-image: url("/photo/sealine_emu582.jpg"); /*0409進度 導入路徑*/
-            box-sizing: border-box;
             border-radius: 15px;
+            overflow: hidden; /* 圓角不會被圖遮住 */
+            background-color: #333; /* 萬一圖沒跑出來深色底 */
+            position: relative; /* 文字疊加 */
+        }
+        .blockimg{
+            
         }
     </style></head>
     <body>
@@ -23,6 +26,7 @@
             <h1>哈哈哈</h1>
         </div>
         <div class="testbox_emu500">
+            <img src="photo/sealine_emu582.jpg" alt="EMU582" class="blockimg">
             <a style="color: cornflowerblue;">早安</a>
         </div>
     </body>
