@@ -4,42 +4,38 @@
         <meta charset="UTF-8">
         <title>自主學習專案測試</title>
         <style>
-            .photo-grid {
-                display: grid;/* 核心邏輯：自動填充，每個格子最少 250px，滿了就換行 */
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-                gap: 20px; /* 格子之間的間距，像 IG 的白邊 */
-                padding: 20px;
-            }
+            /* 這是外層容器：負責「左右滑動」 */
+        .scroll-wrapper {
+            width: 100%;           /* 寬度佔滿螢幕 */
+            overflow-x: auto;      /* 核心：水平方向超出就顯示捲動軸 */
+            white-space: nowrap;   /* 核心：強制裡面的圖不要換行，像排隊一樣排到底 */
+            padding: 10px 0;
+            background-color: #000;/* 背景設黑，更有 IG 感 */
+        }
 
-            .photo-card {
-                background-color: #222; /* 幫小卡片加個深色底，更有質感 */
-                border-radius: 15px;
-                overflow: hidden; /* 確保圖片不會超出圓角外框 */
-                transition: transform 0.3s; /* 為之後的動畫做準備 */
-            }
-
-            .photo-card img {
-                width: 100%;       /* 寬度撐滿卡片 */
-                height: 250px;     /* 固定高度，讓網格整齊 */
-                object-fit: cover; /* 重要！讓照片像 IG 一樣自動裁切填滿，不變形 */
-                display: block;
-            }
-
-            .card-text {
-                padding: 10px;
-                color: white;
-                font-size: 14px;
-            }
+/* 這是裡面的圖片：負責「正方形」與「大小」 */
+        .scroll-wrapper img {
+            display: inline-block; /* 讓圖片可以橫著並排 */
+            width: 150px;          /* 你說要小小的，150px 差不多 */
+            aspect-ratio: 1 / 1;   /* 核心：強制正方形 */
+            object-fit: cover;     /* 核心：自動裁切不壓扁火車或天空 */
+            margin: 5px;           /* 圖片之間的間距 */
+            border-radius: 4px;    /* 稍微一點圓角，比較精緻 */
+            vertical-align: top;
+        }
     </style></head>
     <body>
-        <div class="my-box">
-             <img src="photo/sealine_emu582.jpg" alt="EMU582">
-             <p>早安，這是追分站的EMU582</p>
-        </div>
+        <h3 class="theme-title">天空與風景</h3>
+            <div class="scroll-wrapper">
+                <img src="photo/20230909sky.jpg">
+                <img src="photo/Guanyin_Thota.jpg">
+                <img src="photo/Linkou_TYmetro.jpg">
+                <img src="photo/Taichung_Longjin.jpg">
+            </div>
 
-        <div class="my-box">
-            <img src="photo/Taichung_Longjin.jpg">
-            <p>龍井的晚霞</p>
-        </div>
+        <h3 class="theme-title">EMU500</h3>
+            <div class="scroll-wrapper">
+                <img src="photo/sealine_emu582.jpg">
+            </div>
     </body>
 </html>
