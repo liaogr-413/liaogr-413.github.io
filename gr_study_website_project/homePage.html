@@ -4,34 +4,42 @@
         <meta charset="UTF-8">
         <title>自主學習專案測試</title>
         <style>
-        .body{
-            background-color: #00041b; 
-        }
-        .topbox{
-            background-color: cornflowerblue;
-            height: 200px;
-            box-sizing: border-box;
-        }
-        .textbox_emu500{
-            width: 100px;
-            height: 100px;
-            overflow: hidden; /* 圓角不會被圖遮住 */
-            background-color: #333; /* 萬一圖沒跑出來深色底 */
-            position: relative; /* 文字疊加 */
-        }
-        .blockimg{
-            width: 200px;
-            height: 200px;
-            border-radius: 15px;
-        }
+            .photo-grid {
+                display: grid;/* 核心邏輯：自動填充，每個格子最少 250px，滿了就換行 */
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 20px; /* 格子之間的間距，像 IG 的白邊 */
+                padding: 20px;
+            }
+
+            .photo-card {
+                background-color: #222; /* 幫小卡片加個深色底，更有質感 */
+                border-radius: 15px;
+                overflow: hidden; /* 確保圖片不會超出圓角外框 */
+                transition: transform 0.3s; /* 為之後的動畫做準備 */
+            }
+
+            .photo-card img {
+                width: 100%;       /* 寬度撐滿卡片 */
+                height: 250px;     /* 固定高度，讓網格整齊 */
+                object-fit: cover; /* 重要！讓照片像 IG 一樣自動裁切填滿，不變形 */
+                display: block;
+            }
+
+            .card-text {
+                padding: 10px;
+                color: white;
+                font-size: 14px;
+            }
     </style></head>
     <body>
-        <div class="topbox">
-            <h1 style="left: 300px; height: 100px; font-size: 60;">哈哈哈</h1>
+        <div class="my-box">
+             <img src="photo/sealine_emu582.jpg" alt="EMU582">
+             <p>早安，這是追分站的EMU582</p>
         </div>
-        <div class="testbox_emu500">
-            <img src="photo/sealine_emu582.jpg" alt="EMU582" class="blockimg"><br>
-            <a style="color: rgb(255, 255, 255);">早安，這是追分站的EMU582</a>
+
+        <div class="my-box">
+            <img src="photo/Taichung_Longjin.jpg">
+            <p>龍井的晚霞</p>
         </div>
     </body>
 </html>
