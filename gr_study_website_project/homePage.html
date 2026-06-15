@@ -1,41 +1,167 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
-    <head>
-        <meta charset="UTF-8">
-        <title>自主學習專案測試</title>
-        <style>
-            /* 這是外層容器：負責「左右滑動」 */
-        .scroll-wrapper {
-            width: 100%;           /* 寬度佔滿螢幕 */
-            overflow-x: auto;      /* 核心：水平方向超出就顯示捲動軸 */
-            white-space: nowrap;   /* 核心：強制裡面的圖不要換行，像排隊一樣排到底 */
-            padding: 10px 0;
-            background-color: #000;/* 背景設黑，更有 IG 感 */
-        }
+<head>
+    <title>1142自主學習實作小網頁</title>
+    <style>
+    .area-box {
+        border: 2px solid #ffffff;
+        background-color:  #011b36;
+        padding: 20px; /*內邊距*/;
+        border-radius: 8px; /* I like round corner^v^*/;
+        margin: 20px; /*外邊距*/
+    }
 
-/* 這是裡面的圖片：負責「正方形」與「大小」 */
-        .scroll-wrapper img {
-            display: inline-block; /* 讓圖片可以橫著並排 */
-            width: 150px;          /* 你說要小小的，150px 差不多 */
-            aspect-ratio: 1 / 1;   /* 核心：強制正方形 */
-            object-fit: cover;     /* 核心：自動裁切不壓扁火車或天空 */
-            margin: 5px;           /* 圖片之間的間距 */
-            border-radius: 4px;    /* 稍微一點圓角，比較精緻 */
-            vertical-align: top;
-        }
-    </style></head>
-    <body>
-        <h3 class="theme-title">天空與風景</h3>
-            <div class="scroll-wrapper">
-                <img src="photo/20230909sky.jpg">
-                <img src="photo/Guanyin_Thota.jpg">
-                <img src="photo/Linkou_TYmetro.jpg">
-                <img src="photo/Taichung_Longjin.jpg">
-            </div>
+    body {
+        background-color: #011b36;
+        color: #ffffff;
+    }
 
-        <h3 class="theme-title">EMU500</h3>
-            <div class="scroll-wrapper">
-                <img src="photo/sealine_emu582.jpg">
+    .touch-lightblue {
+        color: #ffffff;
+    }
+
+    .touch-lightblue:hover{
+        color:aqua
+    }
+
+    .touch-purple:hover{
+        color:rgb(157, 0, 255)
+    }
+
+    .touch-becomeBig{
+        font-size: 1rem;
+    }
+
+    .touch-becomeBig:hover{
+        font-size: 1.3rem;
+    }
+
+    .animation{
+        transition: all 0.3s ease-out;
+    }
+
+    .tooltip-container {
+        position: relative;
+        cursor: pointer;
+        padding: 10px;
+        border: 1px dashed #6fb0ff;
+        border-radius: 5px;
+    }
+
+    .tooltip-text {
+        display: none; 
+        margin-top: 10px;
+        padding: 15px;
+        background-color: #1e3a8a;
+        border-radius: 5px;
+        color: #e2e8f0;
+    }
+
+    .tooltip-container:hover .tooltip-text {
+        display: block;
+        animation: fadeIn 0.5s; 
+    }
+
+    @keyframes fadeIn {
+        from { 
+            opacity: 0; 
+        }
+        to { 
+            opacity: 1; 
+        }
+    } 
+    /*給底下tooltip使用的*/
+
+    @keyframes slideUpFade {
+        from {
+            opacity: 0;
+            transform: translateY(-30px); 
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);    
+        }
+    }
+    /*封面學校照片使用*/
+
+    .img-container img {
+        animation: slideUpFade 1.2s ease-out forwards;
+    }
+    </style>
+</head>
+<body>  
+    <div class="img-container">
+        <img src="C:\Users\SURFACE\Downloads\IMG_20260315_182841159_MP.jpeg" alt="school" style="height: 40%; width: 100%;" >
+    </div>
+    <h1 style="color: aqua; font-size: 50px;">自主學習專案</h1>
+    <details>
+        <summary style="font-size: 2rem;">(←展開)這是我的自主學習專案...</summary>
+        <p style="font-size: 2rem;">因製作成品時間較趕，因此僅實作部分文字效果</p>
+    </details>
+
+    <div class="area-box">
+        <h2 style="font-size: 40px;">基礎文字效果</h2>
+        <div>
+            <p class="touch-lightblue">從最基礎的css文字變色開始(滑鼠放上來)</p>
+        </div>
+        <div>
+            <p class="touch-lightblue touch-becomeBig">這裡是變色+放大(滑鼠放上來)</p>
+        </div>
+        <div>
+            <p class="touch-lightblue touch-becomeBig animation">這裡加上了線性動畫(滑鼠放上來)</p>
+        </div>
+    </div>
+    <div class="area-box">
+        <h2 style="font-size: 40px;">文字框的縮放動畫</h2>
+        <div class="tooltip-container">
+            <span class="tooltip-trigger" style="font-size: 30px;">游標放上來看內文</span>
+            <div class="tooltip-text">
+                <p class="touch-purple animation" style="font-size: 30px;">這是利用CSS動畫所製作的一個可隱藏文字框</p>
             </div>
-    </body>
-</html>
+        </div>
+    </div>
+    <h1 style="color: aqua; font-size: 50px;">學習記錄與心得與反思</h1>
+    <div class="area-box">
+        <div class="tooltip-container">
+            <span class="tooltip-trigger" style="font-size: 40px;"><strong>本次自主學習內容</strong></span>
+            <p>游標放在本區塊可顯示</p>
+            <div class="tooltip-text">
+                <p class="animation" style="font-size: 30px; line-height: 1.6;">
+                    本次自主學習我使用了<strong>Ewant上的相關課程課程及測驗</strong>先對<br>
+                    html/css有基礎的認識，藉此了解網頁的架構、各種標籤及<br>
+                    動畫的運作方式，再<strong>透過本頁嘗試自己做出經css排版與動畫<br>
+                    的簡單網頁並結合心得</strong>，最後利用<strong>GitHub Pages</strong>的方式<br>
+                    佈署這個網頁公開成果。<br>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="area-box">
+        <div class="tooltip-container">
+            <span class="tooltip-trigger" style="font-size: 40px;"><strong>學習心得與反思</strong></span>
+            <p>游標放在本區塊可顯示</p>
+            <div class="tooltip-text">
+                <p class="animation" style="font-size: 40px; line-height: 1.2; color: #b6eeff;"><strong>動機</strong></p>
+                <p class="animation" style="font-size: 30px; line-height: 1.8;">
+                    網頁是生活中非常常見的關於資訊與網路的運用，原規畫希望透過<br>
+                    這個自主學習認識有關網頁開發的基礎知識並製作出屬於自己的網頁<br>
+                </p>
+                <p class="animation" style="font-size: 40px; line-height: 1.2; color: #b6eeff;"><strong>現況、心得與反思</strong></p>
+                <p class="animation" style="font-size: 30px; line-height: 1.8;">
+                    透過Ewant課程介紹，我才發現，雖然html與css的架構確實不難，<br>
+                    但功能和各種標籤也比我想像的多很多，雖然真正實作只用到了較簡單<br>
+                    的一些功能和排版，但仍然對於前端網頁開發有印一步的認識。<br>
+                    並且透過利用Github page的佈署，讓我提前認識版本控制與開源平台的概念<br>
+                    <br>
+                    但同期我在學校的選修課也學習到了arduino~app的軟硬整合控制，<br>
+                    我發現我對軟硬整合的領域更感興趣，但也想到，若能將這個<br>
+                    軟硬整合控制接入網頁，應該能比app更輕量簡單，但本次自主學習<br>
+                    僅規劃HTML+css的學習，若需要讓網頁互動，可能需要js或更進階的學習<br>
+                    但也讓我認識到，網頁與軟硬整合控制的潛力。未來也許可以朝此方面嘗試。<br>
+                    <br>
+                    2026.06.11
+                </p>
+            </div>
+        </div>
+    </div>
+</body> 
