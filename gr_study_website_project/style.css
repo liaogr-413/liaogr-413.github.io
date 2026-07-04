@@ -70,7 +70,7 @@
     @keyframes slideUpFade {
         from {
             opacity: 0;
-            transform: translateY(-30px); 
+            transform: translateY(-50px); 
         }
         to {
             opacity: 1;
